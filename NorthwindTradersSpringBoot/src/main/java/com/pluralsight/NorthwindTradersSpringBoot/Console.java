@@ -1,8 +1,11 @@
 package com.pluralsight.NorthwindTradersSpringBoot;
 
 
+import org.springframework.stereotype.Component;
+
 import java.util.Scanner;
 
+@Component
 public class Console {
 
     Scanner scanner = new Scanner(System.in);
