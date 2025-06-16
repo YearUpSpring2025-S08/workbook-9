@@ -1,5 +1,6 @@
 package com.pluralsight.NorthwindTradersSpringBoot.data;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -8,13 +9,10 @@ public class DatabaseConfig {
     private String password;
     private String url;
 
-    public DatabaseConfig(){
-        this.username = "user1";
-        this.password = "password1234";
-        this.url = "jdbc:mysql://localhost:3306/northwind";
-    }
 
-    public DatabaseConfig(String username, String password, String url) {
+    public DatabaseConfig( @Value("${datasource.username}") String username,
+                           @Value("${datasource.password}") String password,
+                           @Value("${datasource.url}") String url) {
         this.username = username;
         this.password = password;
         this.url = url;
