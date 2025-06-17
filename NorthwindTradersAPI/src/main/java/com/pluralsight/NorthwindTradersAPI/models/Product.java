@@ -60,5 +60,4 @@ public class Product implements Serializable {
                 ", price=" + price +
                 '}';
     }
-
 }
