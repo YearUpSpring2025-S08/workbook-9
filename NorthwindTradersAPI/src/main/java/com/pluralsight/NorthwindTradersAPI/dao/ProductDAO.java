@@ -1,4 +1,11 @@
 package com.pluralsight.NorthwindTradersAPI.dao;
 
-public interface ProductsDAO {
+import com.pluralsight.NorthwindTradersAPI.models.Product;
+
+import java.util.List;
+
+public interface ProductDAO {
+    List<Product> getAllProducts();
+    Product getProductById(int productId);
+    void addProduct(Product product);
 }
