@@ -7,5 +7,5 @@ import java.util.List;
 public interface ProductDAO {
     List<Product> getAllProducts();
     Product getProductById(int productId);
-    void addProduct(Product product);
+    Product addProduct(Product product);
 }
